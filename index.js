@@ -26,16 +26,23 @@ console.log(ten)
 //Task d: Write a function to multiply a*b 
 
 function multiply(a,b){
-    console.log(5*60)
+    return (a*b);
 } 
-
+let answer = multiply(5,60);
+console.log(answer)
 
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
+let age = 38
 
+function dogYears(a,b ){
+    return (age*7);
+}
+let dogs = dogYears(age, 7);
+console.log(dogs)
 
 
 
