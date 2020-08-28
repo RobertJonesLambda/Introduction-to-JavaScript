@@ -16,10 +16,10 @@ console.log(noPizza);
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-let ten = '10'
-let integer = parseInt('10', 10);
+let party = '1999'
+let integer = parseInt('1999', 1999);
 
-console.log(ten)
+console.log(integer)
 
 
 
@@ -171,8 +171,21 @@ annoyingSong(5)
 //60s should be D 
 //and anything below 60 should be F
   
-
-  
+function judge(percent){
+    if (percent >= 90){
+        return 'A'
+    } else if (percent >= 80){
+        return 'B'
+    } else if (percent >=70){
+        return 'C'
+    } else if (percent >=60){
+        return 'D'
+    } else {
+        return 'F'
+    }
+    
+}
+console.log(judge(92))
   
 
 /************************************************************** Stretch **************************************************************/
