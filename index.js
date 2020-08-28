@@ -64,9 +64,21 @@ console.log(dogs)
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+function dogFeeder(dogYears, dogWeight){
+    if (dogYears >= 1 && dogWeight <6) {
+        return dogWeight * .05;
+    //adult dogs    
+    } else if (dogYears >= 1 && dogWeight > 6 && dogWeight < 11)
+        {return dogWeight * .04}
+    else if (dogYears >= 1 && dogWeight <= 11 || dogWeight === 15 )
+        {return dogWeight * .03}
+    else if (dogYears >= 1 && dogWeight > 15)
+       { return dogWeight * .02}
+    //puppies
+    
+}
 
-
-
+console.log(dogFeeder(1,15));
 
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
@@ -75,21 +87,66 @@ console.log(dogs)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
+//choose RPS
+function game(pick){
+    let choice = Math.ceil(Math.random() * 3 )
+
+    if (choice === 1) {
+        choice = 'rock'
+    } else if (choice === 2) {
+        choice = 'paper'
+    } else {
+        choice = 'scissors'
+    }
+    console.log(choice)
+    pick = pick.toLowerCase();
+    console.log(pick)
+    if (choice === pick){
+        return 'tie';
+    } else if (choice === 'rock'){
+       if (pick === 'paper'){
+           return 'win';
+       } else{
+           return 'lose';
+       }
+      
+    } else if (choice === 'scissors') {
+        if (pick === 'paper') {
+            return 'lose';
+        } else {
+            return 'win';
+        }
+         
+    } else if (choice === 'paper') {
+        if (pick === 'rock') {
+            return 'lose';
+        } else {
+            return 'win';
+        }
+    }    
+}
+console.log(game('ScIssORS') )
+
   
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-
-
+function conversion (km){
+    let miles = km * .621371 
+    return miles
+}
+console.log(conversion(2))
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
-
-
+function metric(feet){
+    let CM = feet * 30.48
+    return CM
+}
+console.log(metric(3))
 
 
 /************************************************************** Task 6 **************************************************************/
@@ -97,9 +154,13 @@ console.log(dogs)
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
+function annoyingSong(num){
+    for (i = num ; i > 0  ; i--){
+        console.log(`${i} bottles of beer on the wall, ${i} bottles of beer, take one down pass it around, ${i-1} bottles of beer on the wall`)
+    } 
+}
 
-
-
+annoyingSong(5)
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
